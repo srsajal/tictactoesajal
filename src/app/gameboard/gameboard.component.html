@@ -1,0 +1,25 @@
+
+ <div class="msg-container hide" *ngIf="winner">
+  <p id="msg">Congratulations, Winner is {{ winner }}</p>
+  <button id="new-btn" (click)="newGame()">New Game</button>
+</div>
+
+<img [src]="themeIcon" id="icon" (click)="changetheme()">
+
+<main>
+  <h1>Tic Tac Toe</h1>
+  <div class="container">
+    <div class="game">
+      <div *ngFor="let row of board; let i = index">
+        <button
+          class="box"
+          *ngFor="let col of row; let j = index"
+          (click)="makeMove(i, j)"
+        >
+          {{ board[i][j] }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <button id="reset-btn" (click)="newGame()">Reset Game</button>
+</main>
