@@ -10,27 +10,19 @@
 //   transition: background-color 0.5s ease;
 // }
 
-// #reset-btn, #new-btn, #toggle-btn {
-//   padding: 1rem;
-//   font-size: 1.25rem;
-//   background-color: #191913;
-//   color: #fff;
-//   border-radius: 1rem;
-//   border: none;
-//   transition: background-color 0.5s ease;
-// }
+#reset-btn, #new-btn, #toggle-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  transition: background-color 0.5s ease;
+}
 
 #icon {
   width: 30px;
   cursor: pointer;
-}
-:root {
-  --primary-color : white;
-  --secondary-color : aqua;
-}
-.dark-theme {
-  --primary-color : black;
-  --secondary-color : blue;
 }
 
 * {
@@ -38,7 +30,70 @@
   padding: 0;
 }
 
-body{
-  background-color: var(--primary-color);
+main {
   text-align: center;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// .game {
+//   height: 60vmin;
+//   width: 60vmin;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 1.5vmin;
+// }
+
+// .box {
+//   height: 18vmin;
+//   width: 18vmin;
+//   border-radius: 1rem;
+//   border: none;
+//   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+//   font-size: 8vmin;
+//   color: #b0413e;
+//   background-color: #ffffc7;
+//   transition: background-color 0.5s ease;
+// }
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  display: flex; /* Flexbox ensures content is centered */
+  justify-content: center;
+  align-items: center;
+  
+  flex-shrink: 0;
+  box-sizing: border-box; /* Ensure padding/border don't overflow */
+  
+  height: 18vmin;
+  width: 18vmin;
+  
+  margin: 0.75vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(251, 3, 3, 0.3);
+  
+  font-size: 8vmin; /* Fixed font size for X and O */
+  color: #b0413e;
+  background-color: #ffffc7;
+  
+  transition: background-color 0.5s ease;
+  
+  /* Prevent content (like X/O) from pushing the box */
+  overflow: hidden;
 }

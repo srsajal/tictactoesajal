@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '../../service/theme.service';
 
 @Component({
   selector: 'app-gameboard',
@@ -15,19 +16,21 @@ export class GameboardComponent implements OnInit {
   themeIcon : string;
   
   changetheme(): void {
-    document.body.classList.toggle('dark-theme');
+    this.themeService.toggleTheme();
+    // document.body.classList.toggle('dark-theme');
     
-    // Switch the icon based on the theme
-    if (document.body.classList.contains('dark-theme')) {
-      this.themeIcon = '../assets/sun.png';  // Change to sun icon in dark theme
-    } else {
-      this.themeIcon = '../assets/moon.png';  // Change to moon icon in light theme
-    }
+    // // Switch the icon based on the theme
+    // if (document.body.classList.contains('dark-theme')) {
+    //   this.themeIcon = '../assets/sun.png';  // Change to sun icon in dark theme
+    // } else {
+    //   this.themeIcon = '../assets/moon.png';  // Change to moon icon in light theme
+    // }
   }
+  
   
 
 
-  constructor() {
+  constructor(private themeService : ThemeService) {
     this.board = [
       ['', '', ''],
       ['', '', ''],
