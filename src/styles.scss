@@ -2,21 +2,124 @@
 @import "../node_modules/primeflex/primeflex.scss";
 @import "../node_modules/primeicons/primeicons.css";
 
+// :root {
+//     --primary-bg: white;
+//     --primary-text: black;
+//     --secondary-bg: lightgray;
+//   }
+  
+//   .dark-theme {
+//     --primary-bg: rgb(27, 26, 26);
+//     --primary-text: white;
+//     --secondary-bg: gray;
+//   }
+  
+//   body {
+//     background-color: var(--primary-bg);
+//     color: var(--primary-text);
+//     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+//   }
+  
+
+
+
+// :root {
+//   --primary-bg: white;
+//   --primary-text: black;
+//   --secondary-bg: lightgray;
+//   --hover-bg-light: #e0e0e0; /* Light theme hover effect */
+//   --hover-bg-dark: #333; /* Dark theme hover effect */
+//   --icon-brightness: 1; /* Normal brightness for light theme */
+// }
+
+// .dark-theme {
+//   --primary-bg: rgb(27, 26, 26);
+//   --primary-text: white;
+//   --secondary-bg: gray;
+//   --hover-bg-light: #444; /* Adjust for dark theme */
+//   --hover-bg-dark: #555;  /* Darker for hover in dark mode */
+//   --icon-brightness: 0.8; /* Dimmer icon for dark theme */
+// }
+
+// body {
+//   background-color: var(--primary-bg);
+//   color: var(--primary-text);
+//   transition: background-color 0.3s, color 0.3s;
+// }
+
+// #reset-btn, #new-btn, #toggle-btn {
+//   padding: 1rem;
+//   font-size: 1.25rem;
+//   background-color: var(--primary-bg);  /* Dynamic based on theme */
+//   color: var(--primary-text);  /* Dynamic based on theme */
+//   border-radius: 1rem;
+//   border: none;
+//   transition: background-color 0.5s ease, color 0.5s ease;
+// }
+
+// #reset-btn:hover, #new-btn:hover, #toggle-btn:hover {
+//   background-color: var(--hover-bg-light);  /* Slightly darker on hover */
+// }
+
+// #icon {
+//   width: 30px;
+//   cursor: pointer;
+//   filter: brightness(var(--icon-brightness));  /* Dynamic based on theme */
+// }
+
+// #icon:hover {
+//   filter: brightness(1.2); /* Brighten the icon on hover */
+// }
+
+// .box {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-shrink: 0;
+//   box-sizing: border-box;
+//   height: 18vmin;
+//   width: 18vmin;
+//   margin: 0.75vmin;
+//   border-radius: 1rem;
+//   border: none;
+//   box-shadow: 0 0 1rem rgba(251, 3, 3, 0.3);
+  
+//   font-size: 8vmin;
+//   color: var(--primary-text);  /* Dynamic based on theme */
+//   background-color: var(--secondary-bg);  /* Dynamic based on theme */
+//   transition: background-color 0.5s ease, color 0.5s ease;
+// }
+
+// .box:hover {
+//   background-color: var(--hover-bg-light);  /* Slightly change on hover */
+// }
+
+// .dark-theme .box:hover {
+//   background-color: var(--hover-bg-dark);  /* Hover effect in dark theme */
+// }
+
+
+
 :root {
-    --primary-bg: white;
-    --primary-text: black;
-    --secondary-bg: lightgray;
-  }
-  
-  .dark-theme {
-    --primary-bg: rgb(27, 26, 26);
-    --primary-text: white;
-    --secondary-bg: gray;
-  }
-  
-  body {
-    background-color: var(--primary-bg);
-    color: var(--primary-text);
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-  }
-  
+  --primary-bg: #f0f4f8; /* Light pastel blue */
+  --primary-text: #2c3e50; /* Dark navy for contrast */
+  --secondary-bg: #dfe6e9; /* Soft grey-blue background */
+  --accent-color: #ff6b6b; /* Vibrant red accent color */
+  --button-bg: #3498db; /* Light blue button background */
+  --button-hover-bg: #2980b9; /* Darker blue for hover state */
+}
+
+.dark-theme {
+  --primary-bg: #2c3e50; /* Dark navy background for dark mode */
+  --primary-text: #ecf0f1; /* Light grey text */
+  --secondary-bg: #34495e; /* Darker background */
+  --accent-color: #e74c3c; /* Strong red for dark mode */
+  --button-bg: #2980b9;
+  --button-hover-bg: #1a5276;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

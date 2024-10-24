@@ -1,23 +1,82 @@
-// .box {
-//   height: 18vmin;
-//   width: 18vmin;
+
+// #reset-btn, #new-btn, #toggle-btn {
+//   padding: 1rem;
+//   font-size: 1.25rem;
+//   background-color: #191913;
+//   color: #fff;
 //   border-radius: 1rem;
 //   border: none;
-//   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-//   font-size: 8vmin;
-//   color: #b0413e;
-//   background-color: #ffffc7;
 //   transition: background-color 0.5s ease;
 // }
+
+// #icon {
+//   width: 30px;
+//   cursor: pointer;
+// }
+
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// main {
+//   text-align: center;
+// }
+
+// .container {
+//   height: 70vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+
+// .game {
+//   height: 60vmin;
+//   width: 60vmin;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .box {
+//   display: flex; /* Flexbox ensures content is centered */
+//   justify-content: center;
+//   align-items: center;
+  
+//   flex-shrink: 0;
+//   box-sizing: border-box; /* Ensure padding/border don't overflow */
+  
+//   height: 18vmin;
+//   width: 18vmin;
+  
+//   margin: 0.75vmin;
+//   border-radius: 1rem;
+//   border: none;
+//   box-shadow: 0 0 1rem rgba(251, 3, 3, 0.3);
+  
+//   font-size: 8vmin; /* Fixed font size for X and O */
+//   color: #b0413e;
+//   background-color: #ffffc7;
+  
+//   transition: background-color 0.5s ease;
+  
+//   /* Prevent content (like X/O) from pushing the box */
+//   overflow: hidden;
+// }
+
+
 
 #reset-btn, #new-btn, #toggle-btn {
   padding: 1rem;
   font-size: 1.25rem;
-  background-color: #191913;
+  background-color: var(--button-bg);
   color: #fff;
   border-radius: 1rem;
   border: none;
   transition: background-color 0.5s ease;
+  cursor: pointer;
 }
 
 #icon {
@@ -41,27 +100,6 @@ main {
   align-items: center;
 }
 
-// .game {
-//   height: 60vmin;
-//   width: 60vmin;
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 1.5vmin;
-// }
-
-// .box {
-//   height: 18vmin;
-//   width: 18vmin;
-//   border-radius: 1rem;
-//   border: none;
-//   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-//   font-size: 8vmin;
-//   color: #b0413e;
-//   background-color: #ffffc7;
-//   transition: background-color 0.5s ease;
-// }
 
 .game {
   height: 60vmin;
@@ -89,11 +127,101 @@ main {
   box-shadow: 0 0 1rem rgba(251, 3, 3, 0.3);
   
   font-size: 8vmin; /* Fixed font size for X and O */
-  color: #b0413e;
-  background-color: #ffffc7;
+  color: var(--primary-text);
+  background-color: var(--secondary-bg);
   
   transition: background-color 0.5s ease;
   
   /* Prevent content (like X/O) from pushing the box */
   overflow: hidden;
 }
+
+
+
+// #reset-btn, #new-btn, #toggle-btn {
+//   padding: 1rem;
+//   font-size: 1.25rem;
+//   background-color: var(--button-bg); /* Beautiful button color */
+//   color: white;
+//   border-radius: 1rem;
+//   border: none;
+//   transition: background-color 0.3s ease, transform 0.3s ease;
+//   cursor: pointer;
+// }
+
+#reset-btn:hover, #new-btn:hover, #toggle-btn:hover {
+  background-color: var(--button-hover-bg); /* Hover effect */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+// #icon {
+//   width: 30px;
+//   cursor: pointer;
+// }
+
+// main {
+//   text-align: center;
+//   // padding: 2rem;
+// }
+
+// .container {
+//   height: 70vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .game {
+//   // display: grid;
+//   // grid-template-columns: repeat(3, 1fr); /* 3 columns */
+//   // grid-template-rows: repeat(3, 1fr); /* 3 rows */
+//   // gap: 1rem;
+//   // padding: 1rem;
+//   height: 60vmin;
+//   width: 60vmin;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+
+// .box {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-shrink: 0;
+//   box-sizing: border-box;
+//   height: 18vmin;
+//   width: 18vmin;
+//   margin: 0.75vmin;
+//   border-radius: 1rem;
+//   border: none;
+//   background-color: var(--secondary-bg); /* Subtle background color */
+//   // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+//   box-shadow: 0 0 1rem rgba(251, 3, 3, 0.3);
+//   font-size: 8vmin;
+//   color: var(--primary-text);
+//   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+//   cursor: pointer;
+//   overflow: hidden;
+// }
+
+.box:hover {
+  // background-color: var(--accent-color); /* Highlight on hover */
+  // color: white;
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+
+
+
+
+// .msg-container {
+//   background-color: var(--accent-color);
+//   color: white;
+//   padding: 1rem;
+//   border-radius: 10px;
+//   margin-bottom: 2rem;
+//   font-size: 1.25rem;
+// }

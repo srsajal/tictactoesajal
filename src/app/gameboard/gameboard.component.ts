@@ -17,14 +17,11 @@ export class GameboardComponent implements OnInit {
   
   changetheme(): void {
     this.themeService.toggleTheme();
-    // document.body.classList.toggle('dark-theme');
-    
-    // // Switch the icon based on the theme
-    // if (document.body.classList.contains('dark-theme')) {
-    //   this.themeIcon = '../assets/sun.png';  // Change to sun icon in dark theme
-    // } else {
-    //   this.themeIcon = '../assets/moon.png';  // Change to moon icon in light theme
-    // }
+    if (this.themeService.isDarkTheme()) {
+      this.themeIcon = '../assets/sun.png';  // Change to sun icon in dark theme
+    } else {
+      this.themeIcon = '../assets/moon.png';  // Change to moon icon in light theme
+    }
   }
   
   
@@ -63,6 +60,18 @@ export class GameboardComponent implements OnInit {
     return this.board.flat().every(cell => cell);
   }
   
+  // makeMove(row: number, col: number): void {
+  //   if (!this.board[row][col] && !this.winner) {
+  //     this.board[row][col] = this.currentPlayer;
+  //     if (this.checkWinner()) {
+  //       this.winner = this.currentPlayer;
+  //     } else if (this.checkDraw()) {
+  //       this.winner = 'Draw';
+  //     } else {
+  //       this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
+  //     }
+  //   }
+  // }
   makeMove(row: number, col: number): void {
     if (!this.board[row][col] && !this.winner) {
       this.board[row][col] = this.currentPlayer;
@@ -75,6 +84,7 @@ export class GameboardComponent implements OnInit {
       }
     }
   }
+  
 
   checkWinner(): boolean {
     // Check rows, columns, and diagonals
