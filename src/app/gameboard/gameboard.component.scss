@@ -1,4 +1,3 @@
-
 // #reset-btn, #new-btn, #toggle-btn {
 //   padding: 1rem;
 //   font-size: 1.25rem;
@@ -44,31 +43,40 @@
 //   display: flex; /* Flexbox ensures content is centered */
 //   justify-content: center;
 //   align-items: center;
-  
+
 //   flex-shrink: 0;
 //   box-sizing: border-box; /* Ensure padding/border don't overflow */
-  
+
 //   height: 18vmin;
 //   width: 18vmin;
-  
+
 //   margin: 0.75vmin;
 //   border-radius: 1rem;
 //   border: none;
 //   box-shadow: 0 0 1rem rgba(251, 3, 3, 0.3);
-  
+
 //   font-size: 8vmin; /* Fixed font size for X and O */
 //   color: #b0413e;
 //   background-color: #ffffc7;
-  
+
 //   transition: background-color 0.5s ease;
-  
+
 //   /* Prevent content (like X/O) from pushing the box */
 //   overflow: hidden;
 // }
 
+.connect {
+  size: 3vmin;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin-right: 2%;
+  color: var(--accent-color);
+}
 
-
-#reset-btn, #new-btn, #toggle-btn {
+#reset-btn,
+#new-btn,
+#toggle-btn {
   padding: 1rem;
   font-size: 1.25rem;
   background-color: var(--button-bg);
@@ -111,27 +119,30 @@ main {
 }
 
 .box {
-  display: flex; /* Flexbox ensures content is centered */
+  display: flex;
+  /* Flexbox ensures content is centered */
   justify-content: center;
   align-items: center;
-  
+
   flex-shrink: 0;
-  box-sizing: border-box; /* Ensure padding/border don't overflow */
-  
+  box-sizing: border-box;
+  /* Ensure padding/border don't overflow */
+
   height: 18vmin;
   width: 18vmin;
-  
+
   margin: 0.75vmin;
   border-radius: 1rem;
-  border: none;
-  box-shadow: 0 0 1rem rgba(251, 3, 3, 0.3);
-  
-  font-size: 8vmin; /* Fixed font size for X and O */
+  border: 2px solid var(--button-bg);
+  box-shadow: 0 0 1rem rgba(245, 36, 36, 0.3);
+
+  font-size: 8vmin;
+  /* Fixed font size for X and O */
   color: var(--primary-text);
   background-color: var(--secondary-bg);
-  
+
   transition: background-color 0.5s ease;
-  
+
   /* Prevent content (like X/O) from pushing the box */
   overflow: hidden;
 }
@@ -149,9 +160,13 @@ main {
 //   cursor: pointer;
 // }
 
-#reset-btn:hover, #new-btn:hover, #toggle-btn:hover {
-  background-color: var(--button-hover-bg); /* Hover effect */
-  transform: scale(1.05); /* Slightly enlarge the button */
+#reset-btn:hover,
+#new-btn:hover,
+#toggle-btn:hover {
+  background-color: var(--button-hover-bg);
+  /* Hover effect */
+  transform: scale(1.05);
+  /* Slightly enlarge the button */
 }
 
 // #icon {
@@ -210,7 +225,8 @@ main {
 .box:hover {
   // background-color: var(--accent-color); /* Highlight on hover */
   // color: white;
-  transform: translateY(-3px); /* Slight lift on hover */
+  transform: translateY(-3px);
+  /* Slight lift on hover */
 }
 
 

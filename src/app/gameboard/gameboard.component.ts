@@ -13,16 +13,7 @@ export class GameboardComponent implements OnInit {
   board: string[][];
   currentPlayer: string;
   winner: string;
-  themeIcon : string;
   
-  changetheme(): void {
-    this.themeService.toggleTheme();
-    if (this.themeService.isDarkTheme()) {
-      this.themeIcon = '../assets/sun.png';  // Change to sun icon in dark theme
-    } else {
-      this.themeIcon = '../assets/moon.png';  // Change to moon icon in light theme
-    }
-  }
   
   
 
@@ -35,7 +26,6 @@ export class GameboardComponent implements OnInit {
     ];
     this.currentPlayer = 'X';
     this.winner = '';
-    this.themeIcon = '../assets/moon.png';
   }
 
   ngOnInit(): void {
